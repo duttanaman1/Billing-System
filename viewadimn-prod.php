@@ -80,7 +80,26 @@ include('connect.php');
             </table>
         </div>
     </div>
+    <div class="card w-25">
+        <div class="card-header">
+            Current VAT amount:
+            <?php
+            $vat = mysqli_fetch_assoc(mysqli_query($con, "SELECT * from vat_tbl"));
+            echo $vat['vat_amount'];
+            ?>
+            <br>
 
+        </div>
+        <div class="card-body">
+
+            <form action="sqlupdate-vat.php" method="post">
+                Update VAT amount
+                <input type="number" name="vat" id="" class="form-control">
+                <br>
+                <input type="submit" value="UPDATE" name="submit" class="btn btn-warning">
+            </form>
+        </div>
+    </div>
 </div>
 
 <footer>

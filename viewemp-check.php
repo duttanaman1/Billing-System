@@ -18,6 +18,12 @@ if ($_POST['submit'] != null) {
         <div class="card">
             <div class="card-header">
                 <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <h2>Company Name</h2>
+                            <h5>Company details</h5>
+                        </center>
+                    </div>
                     <div class="col-md-3">
                         <h3>Bill Number: <?php echo $billno; ?></h3>
                     </div>
@@ -26,6 +32,7 @@ if ($_POST['submit'] != null) {
                     <div class="col-md-3">
                         <h3>Date:<?php echo $date; ?></h3>
                     </div>
+
                 </div>
 
 
@@ -79,11 +86,22 @@ if ($_POST['submit'] != null) {
                         }
                         ?>
                         <tr style="border-top:3px solid black;">
+                            <td colspan="5">
+                                <?php
+                                $vat = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM vat_tbl"));
+                                ?>
+                                Adding VAT <?php echo $vat['vat_amount']; ?>%
+                            </td>
+                            <td><?php echo $tot / 100 * $vat['vat_amount']; ?></td>
+                        </tr>
+                        <tr style="border-top:3px solid black;">
                             <td colspan="5">total</td>
-                            <td><?php echo $tot; ?></td>
+                            <td><?php $tot = $tot + $tot / 100 * $vat['vat_amount'];
+                                echo $tot; ?></td>
                         </tr>
                     </tbody>
                 </table>
+                <button class="btn btn-success" onclick="window.print();">Print</button>
             </div>
         </div>
     </div>

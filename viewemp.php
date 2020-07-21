@@ -19,11 +19,13 @@ $billid = $bill['billno'];
     <div class="card">
         <div class="card-header" style="color:white">
             <div class="row">
-                <div class="col-md-12 my-2">
+                <div class="col-md-12">
                     <center>
-                        <h2>Billing System</h2>
+                        <h2>Company Name</h2>
+                        <h5>Company details</h5>
                     </center>
                 </div>
+
                 <div class="col-md-4">Bill number:<?php echo $billid; ?></div>
                 <div class="col-md-6"></div>
                 <div class="col-md-2">Date: <?php echo date("Y/m/d"); ?></div>
@@ -99,8 +101,18 @@ $billid = $bill['billno'];
                     }
                     ?>
                     <tr style="border-top:3px solid black;">
+                        <td colspan="5">
+                            <?php
+                            $vat = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM vat_tbl"));
+                            ?>
+                            Adding VAT <?php echo $vat['vat_amount']; ?>%
+                        </td>
+                        <td><?php echo $tot / 100 * $vat['vat_amount']; ?></td>
+                    </tr>
+                    <tr style="border-top:3px solid black;">
                         <td colspan="5">total</td>
-                        <td><?php echo $tot; ?></td>
+                        <td><?php $tot = $tot + $tot / 100 * $vat['vat_amount'];
+                            echo $tot; ?></td>
                     </tr>
                     <tr style="border-top:3px solid black;">
                         <td colspan="5">Customer pay</td>
