@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Billing System</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -669,7 +669,7 @@
                 <h2><span>W</span><span>ELCOME</span></h2>
                 <h5>COLDPLAY</h5>
             </div>
-            <div class='logo'></div>
+            <div class='logo'><img src="img/logo.png" alt="LOGO" height="40em"></div>
         </section>
         <section id="grid_wrapper" class="init">
             <card>
