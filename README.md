@@ -1,0 +1,3 @@
+# Billing-System
+Billing system built using html css bootstrap php javascript
+This is a web-based application coded using PHP, Mysql, HTML, CSS and JQuery. This application has three primary stakeholders: super admin, admin and employee. Superadmin has abilities to add the product details, change the value of VAT and GST, register new admin, make changes to the entire database. Admins have skills to add product details such as its name, price, stock and discount offered. Employees can create a bill, monitor the transactions. This system is flexible to use and is secure. With proper conventions and designs, the application is a built-in user-friendly manner.
