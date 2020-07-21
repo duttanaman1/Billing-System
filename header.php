@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 5</title>
+    <title>Billing System</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -102,7 +102,7 @@
 
 <body onload="startTime()">
     <nav class=" navbar navbar-expand-sm bg-dark navbar-dark position: sticky;">
-        <a class="navbar-brand">LOGO</a>
+        <a class="navbar-brand"><img src="img/logo.png" alt="LOGO" height="40em"></a>
 
 
         <ul class="navbar-nav  ml-auto">
